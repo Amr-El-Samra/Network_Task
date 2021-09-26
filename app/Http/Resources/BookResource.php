@@ -18,11 +18,11 @@ class BookResource extends JsonResource
             'id'=> $this->id,
             'name'=> $this->name,
             'details'=> $this->details,
-            'number of pages'=> $this->numberOfPages,
+            'numberOfPages'=> $this->numberOfPages,
             'price'=> number_format($this->price),
             'cover'=> asset("storage/" . $this->cover) ,
-            'category'=> $this->cat->name,
-            'author'=> $this->author->name,
+            'category'=> $this->cat,
+            'author'=> $this->author,
             'add time'=> $this->created_at,
         ];
     }
